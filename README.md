@@ -1,7 +1,7 @@
 # HexagonReborn
 
 ##### This is an overhaul of the [Hexagon](https://www.phpbb.com/customise/db/style/hexagon/) style available on the PHPBB's [CDB](https://www.phpbb.com/customise/db/style/hexagon/). 
-Style comes with the light color scheme version (requires main style to be installed in order to work)  and colorpicker where user can choose one out of five colours available.
+Style comes with the [light](https://github.com/MannixMD/HexagonRebornLight) color scheme version (requires main style to be installed in order to work)  and colorpicker where user can choose one out of five colours available.
 ![ColorPicker](https://i.imgur.com/lQ6ITWR.png)
 
 ## Style Features:
