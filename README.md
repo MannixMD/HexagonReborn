@@ -15,3 +15,7 @@ All features can be turned on/off/configured in the *options.html* file
 ## Recommended Extensions:
 * QuickStyle- *for easy switching to the Light version.*
 * QuickLogin-*for quicker login on mobiles.*
+
+## Screenshots:
+
+[Index Page](https://imgur.com/aWEOw6X) [Topics List Page](https://imgur.com/ObEowUo) [Topic Page](https://imgur.com/4eLceY5) [Mobile Menu](https://imgur.com/fDDWZgN) [Mobile Topic View](https://imgur.com/pte7E2r)
