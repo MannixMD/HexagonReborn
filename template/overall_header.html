@@ -49,7 +49,7 @@
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
 <link href="{T_STYLESHEET_LANG_LINK}" rel="stylesheet">
 <link href="{T_THEME_PATH}/css/hexagon.css" rel="stylesheet">
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:normal,bold" />
 
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
 	<link href="{T_THEME_PATH}/bidi.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
@@ -78,6 +78,14 @@
 </head>
 <!-- INCLUDE options.html -->
 <body id="phpbb" class="nojs notouch section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}">
+<!-- EVENT overall_header_body_before -->
+	
+<div id="wrap" class="wrap">
+<!-- INCLUDE navbar_main.html -->
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	
+	<div id="page-header">
+	<!-- IF $COLORPICKER == 'yes'-->
 <!-- IF S_USER_LOGGED_IN -->
 <div id="slideout">
      <i class="icon fa-paint-brush fa-fw" aria-hidden="true" title="ColorSwitcher"></i>
@@ -86,13 +94,7 @@
       </div>
 </div>
 <!-- ENDIF -->
-<!-- EVENT overall_header_body_before -->
-	
-<div id="wrap" class="wrap">
-<!-- INCLUDE navbar_main.html -->
-	<a id="top" class="top-anchor" accesskey="t"></a>
-	
-	<div id="page-header">
+<!-- ENDIF -->
 		<div class="headerbar" role="banner">
 	
 		<!-- EVENT overall_header_headerbar_before -->
