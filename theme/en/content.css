@@ -25,7 +25,6 @@ ul.topiclist dl {
 
 ul.topiclist li.row dl {
 	padding: 15px 0;
-	box-shadow: 0 0 4px #000000;
 }
 
 ul.topiclist dt, ul.topiclist dd {
@@ -97,10 +96,6 @@ ul.topiclist li.row dt a.subforum {
 	float: left;
 	padding-top: 5px;
 	margin-right: 5px;
-}
-
-li.row {
-	border-bottom: 8px solid #262626;
 }
 
 li.row strong {
@@ -577,9 +572,7 @@ blockquote .codebox {
 	border: 1px solid transparent;
 /*	cursor: move; */
 	cursor: default;
-	    border-color: #de7300 !important;
     border-radius: 0px !important;
-    box-shadow: 0 0 4px #000000;
 }
 
 /* Inline image thumbnails */
