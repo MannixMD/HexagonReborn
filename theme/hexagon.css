@@ -12,7 +12,6 @@ ul#nav-main {
     margin: auto;
 }
 
-
 @media (max-width: 700px) {
 .nav-main .icon {
     font-size: 30px;
@@ -180,17 +179,13 @@ dl.panel {
 .announce_read:before,
 .announce_read_mine:before,
 .sticky_read:before,
-.sticky_read_mine:before { 
-	content: '\e800'; 
-}
+.sticky_read_mine:before,
 .global_unread:before,
 .global_unread_mine:before,
 .announce_unread:before,
 .announce_unread_mine:before,
 .sticky_unread:before,
-.sticky_unread_mine:before {
-	content: '\e800'; 	
-}
+.sticky_unread_mine:before,
 .global_read_locked:before,
 .global_read_locked_mine:before,
 .announce_read_locked:before,
@@ -199,56 +194,45 @@ dl.panel {
 .sticky_read_locked:before,
 .sticky_read_locked_mine:before,
 .topic_read_locked:before,
-.topic_read_locked_mine:before {
-	content: '\e800'; 	 
-}
+.topic_read_locked_mine:before,
 .global_unread_locked:before,
 .global_unread_locked_mine:before,
 .announce_unread_locked:before,
 .announce_unread_locked_mine:before,
 .forum_unread_locked:before,
 .topic_unread_locked:before,
-.topic_unread_locked_mine:before {
-	content: '\e800'; 
-}
-.forum_link:before { 
-	content: '\f08e';  
-	font-family: FontAwesome;
-}
+.topic_unread_locked_mine:before,
+.global_unread_locked:before,
+.global_unread_locked_mine:before,
+.announce_unread_locked:before,
+.announce_unread_locked_mine:before,
+.forum_unread_locked:before,
+.topic_unread_locked:before,
+.topic_unread_locked_mine:before,
 .forum_read:before,
 .forum_read_subforum:before,
 .topic_read:before,
-.topic_read_mine:before	{ 
-	content: '\e800'; 
-}
+.topic_read_mine:before,
 .forum_unread:before,
 .forum_unread_subforum:before,
 .topic_unread:before,
-.topic_unread_mine:before {
-	content: '\e800';
-}
+.topic_unread_mine:before,
 .sticky_unread_locked:before,
-.sticky_unread_locked_mine:before { 
-	content: '\e800'; 
-}
-.topic_moved:before { 
-	content: '\e800';  
-}
+.sticky_unread_locked_mine:before,
+.topic_moved:before,
 .topic_read_hot:before,
-.topic_read_hot_mine:before { 
-	content: '\e800';  
-}
+.topic_read_hot_mine:before,
 .topic_unread_hot:before,
-.topic_unread_hot_mine:before { 
-	content: '\e800'; 
-}
-.pm_read:before	{ 
-	content: '\e800';  
-}
+.topic_unread_hot_mine:before,
+.pm_read:before,
 .pm_unread:before { 
 	content: '\e800'; 
 }
 
+.forum_link:before { 
+	content: '\f08e';
+	font-family: FontAwesome;
+}
 .forum_unread_subforum:after{
 	content: '\e800';
     margin: 10px 0 0 16px;
@@ -295,7 +279,9 @@ dl.panel {
     margin: 0 0 0 10px;
     font-size: 20px;
     font-family: FontAwesome;
-	
+	-webkit-animation: pulse 2s linear infinite;
+	animation: pulse 2s linear infinite;
+	top: 38%;
 }
 
 .global_read,
@@ -351,14 +337,14 @@ dl.panel {
     font-family: FontAwesome;
     padding-right: 2px;
     font-size: 20px;
-    font-weight: normal;	
+    font-weight: normal;
 }
 .check:before {
     content: "\f046";
     font-family: FontAwesome;
     padding-right: 2px;
     font-size: 14px;
-    font-weight: normal;	
+    font-weight: normal;
 }
 .settings:before {
     content: "\f1de";
@@ -536,10 +522,10 @@ a.nav-avatar img {
     background-repeat: no-repeat;
     background-position:left center;
     background-size: 90px;
-}	
+}
 @media (max-width: 700px) {
 	.no-avatar .avatar-container {
-	    background-size: 32px;
+	background-size: 32px;
     background-position: inherit;
     height: 32px;
 	width: 32px;
@@ -874,4 +860,39 @@ a.nav-avatar img {
 .faa-parent.animated-hover:hover > .faa-ring.faa-slow {
   -webkit-animation: ring 3s ease infinite;
   animation: ring 3s ease infinite;
+}
+/* PULSE */
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
