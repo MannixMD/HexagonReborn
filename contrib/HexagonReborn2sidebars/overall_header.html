@@ -53,7 +53,6 @@
 <!-- ENDIF -->
 <link href="{T_FONT_AWESOME_LINK}" rel="stylesheet">
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
-<link href="{T_STYLESHEET_LANG_LINK}" rel="stylesheet">
 <link href="{T_THEME_PATH}/css/hexagon.css" rel="stylesheet">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:normal,bold" />
 
@@ -94,6 +93,7 @@
 		<div class="headerbar" role="banner">
 	
 		<!-- EVENT overall_header_headerbar_before -->
+
 		<!-- IF $SEARCHBAR == 'headbar'-->
 			<!-- EVENT overall_header_searchbox_before -->
 			
@@ -139,12 +139,12 @@
 	<!-- EVENT overall_header_page_body_before -->
 
 	<a id="start_here" class="anchor"></a>
-
-	<div id="page-body" class="page-body" role="main">
-	<!-- IF $SIDEBAR == 'yes'-->
-	<div class="page-body-inner">
+	<!-- IF $SIDEBARS == 'left' || $SIDEBARS == 'both' -->
+	<div class="sidebar-left"> <!-- INCLUDE sidebar_left.html --> </div>
 	<!-- ENDIF -->
-
+	<div id="page-body" class="page-body" role="main">
+	<!-- IF $SIDEBARS == 'left' || $SIDEBARS == 'right' || $SIDEBARS == 'both' --> <div class="page-body-inner <!-- IF $SIDEBARS == 'left' || $SIDEBARS == 'right' --> sidebar-body <!-- ENDIF --> "> <!-- ENDIF -->
+	
 		<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
 		<div id="information" class="rules">
 			<div class="inner">

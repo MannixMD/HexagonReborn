@@ -3,8 +3,6 @@
 
 	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT  -->
 			</ul>
-		
-
 			</div>
 		</div>
 	<!-- ENDIF -->
@@ -25,10 +23,7 @@
 					<!-- EVENT forumlist_body_category_header_row_append -->
 				</li>
 			</ul>
-			
-			
 			<ul class="topiclist forums">
-
 	<!-- ENDIF -->
 	<!-- EVENT forumlist_body_category_header_after -->
 
@@ -68,7 +63,7 @@
 						<!-- ENDIF -->
 
 						<!-- IF not S_IS_BOT -->
-				<div class="responsive-show" style="display: none;">
+						<div class="responsive-show" style="display: none;">
 							<!-- IF forumrow.CLICKS -->
 								{L_REDIRECTS}{L_COLON} <strong>{forumrow.CLICKS}</strong>
 							<!-- ELSEIF not forumrow.S_IS_LINK and forumrow.TOPICS -->
@@ -109,7 +104,11 @@
 								<!-- ENDIF -->
 								<br />{forumrow.LAST_POST_TIME}
 							<!-- ELSE -->
-								{L_NO_POSTS}<br />&nbsp;
+							{% if forumrow.U_UNAPPROVED_TOPICS %}
+								{{ lang('TOPIC_UNAPPROVED_FORUM', forumrow.TOPICS) }}
+							{% else %}
+								{{ lang('NO_POSTS') }}
+							{% endif %}
 							<!-- ENDIF -->
 						</span>
 					</dd>
@@ -124,8 +123,6 @@
 
 	<!-- IF forumrow.S_LAST_ROW -->
 			</ul>
-		
-
 			</div>
 		</div>
 	<!-- EVENT forumlist_body_last_row_after -->
